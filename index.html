@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charmboard</title>
+    <style>
+        
+body {
+    background-color: #F4F4F4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.square {
+    background-color: #ffffff;
+    position: relative;
+    border: 20px solid #A52A2A;
+    padding: 30px;
+    width: 50vh;
+    height: 50vh;
+}
+
+.edge-top,
+.edge-bottom,
+.edge-left,
+.edge-right {
+    position: absolute;
+    border: 2px solid black;
+}
+
+.edge-top {
+    width: calc(100% - 140px);
+    height: 14px;
+    left: 50%;
+    transform: translateX(-50%) translateY(40px);
+}
+
+.edge-bottom {
+    width: calc(100% - 140px);
+    height: 14px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30px);
+}
+
+.edge-left {
+    width: 14px;
+    height: calc(100% - 140px);
+    top: 50%;
+    transform: translateY(-50%) translateX(30px);
+}
+
+.edge-right {
+    width: 14px;
+    height: calc(100% - 140px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-30px);
+}
+
+.edge-top{
+    top: 0;
+    transform-origin: top center;
+}
+ .edge-bottom {
+    bottom: 0;
+    transform-origin: bottom center;
+}
+
+.edge-left{
+    left: 0;
+    transform-origin: left center;
+}
+ .edge-right {
+    right: 0;
+    transform-origin: right center;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.medium-circle1 {
+    width: 60px;
+    height: 60px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.medium-circle2 {
+    width: 70px;
+    height: 70px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.medium-circle3 {
+    width: 80px;
+    height: 80px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.edge-left-left {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 42px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    margin-top: 80px;
+}
+
+.edge-left-right {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 42px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    margin-top: 80px;
+}
+
+.edge-right-left {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 42px;
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    margin-bottom: 80px;
+}
+
+.edge-right-right {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 42px;
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    margin-bottom: 80px;
+}
+
+.edge-top-left {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 75px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    margin-top: 50px;
+}
+
+.edge-top-right {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 75px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    margin-top: 50px;
+}
+
+.edge-bottom-left {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 75px;
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    margin-bottom: 40px;
+}
+
+.edge-bottom-right {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 75px;
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    margin-bottom: 40px;
+}
+
+.coins {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    height: 10%;
+}
+
+    </style>
+</head>
+<body >
+    
+    <div class="square">
+        <div class="edge-top"></div>
+        <div class="edge-bottom"></div>
+        <div class="edge-left"></div>
+        <div class="edge-right"></div>
+        <div class="circle top-left"></div>
+        <div class="circle top-right"></div>
+        <div class="circle bottom-left"></div>
+        <div class="circle bottom-right"></div>
+        <div class="edge-top-left"></div>
+        <div class="edge-top-right"></div>
+        <div class="edge-bottom-left"></div>
+        <div class="edge-bottom-right"></div>
+        <div class="edge-left-left"></div>
+        <div class="edge-left-right"></div>
+        <div class="edge-right-left"></div>
+        <div class="edge-right-right"></div>
+        <div class="medium-circle1"></div>
+        <div class="medium-circle2"></div>
+        <div class="medium-circle3"></div>
+        <img class="coins" src="./coins.png" alt="">
+    </div>
+</body>
+</html>
